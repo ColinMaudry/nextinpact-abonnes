@@ -1,7 +1,15 @@
 #!/bin/bash
 temp=abonnes_temp.csv
 
-scrapy crawl abonnes -o $temp
+cd $(dirname "$0")
+
+pwd
+
+scrapy=/home/$USER/.local/bin/scrapy
+
+echo $scrapy
+
+$scrapy crawl abonnes -o $temp
 
 if [[ -f abonnes.csv  ]]
 then
