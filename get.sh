@@ -1,4 +1,7 @@
 #!/bin/bash
+
+git pull
+
 temp=abonnes_temp.csv
 
 cd $(dirname "$0")
