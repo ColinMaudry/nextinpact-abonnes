@@ -1,13 +1,14 @@
 #!/bin/bash
+temp=abonnes_temp.csv
 
-scrapy crawl abonnes -o abonnes_temp
+scrapy crawl abonnes -o $temp
 
 if [[ -f abonnes.csv  ]]
 then
-    tail -n 1 abonnes_temp >> abonnes.csv
-    rm abonnes_temp
+    tail -n 1 $temp >> abonnes.csv
+    rm $temp
 else
-    mv abonnes_temp abonnes.csv
+    mv $temp abonnes.csv
 fi
 
 git add abonnes.csv
