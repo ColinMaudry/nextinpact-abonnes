@@ -9,3 +9,7 @@ then
 else
     mv abonnes_temp abonnes.csv
 fi
+
+git add abonnes.csv
+git commit -m "Mise à jour du nombre d'abonnés"
+git push origin master
